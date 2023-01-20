@@ -12,7 +12,10 @@ public class EmployeeDao {
 	}
 	
 	public int saveEmployee(Employee e) throws Exception{  
-	    String query="insert into employee values('"+e.getId()+"','"+e.getName()+"','"+e.getSalary()+"')";  
+		System.out.println("save method");
+		System.out.println("e.getId()+e.getName()+e.getSalary()");
+	    String query="insert into employee values('"+e.getId()+"','"+e.getName()+"','"+e.getSalary()+"')";
+	    
 	    return jdbcTemplate.update(query) ;
 	}
 	
